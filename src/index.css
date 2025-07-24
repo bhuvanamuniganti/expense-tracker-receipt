@@ -11,3 +11,84 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Small devices (phones) */
+@media (max-width: 600px) {
+  .bg-container {
+    padding: 20px;
+  }
+
+  .headingBgContainer,
+  .addExpencesContainer,
+  .expencesListContainer {
+    width: 100%;  /* Full width on small screens */
+    padding: 10px;
+  }
+
+  .headingBgContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .expences-container {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .addItemContainer {
+    flex-direction: column;  /* Stack input fields vertically */
+    gap: 10px;
+  }
+
+  .priceContainer,
+  .descriptionContainer,
+  .dateContainer {
+    min-width: 100%; /* Full width inputs */
+  }
+
+  .buttonContainer {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 16px;
+  }
+
+  .expenseTable th,
+  .expenseTable td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .download-container {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .downloadLink {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .headingBgContainer,
+  .addExpencesContainer,
+  .expencesListContainer {
+    width: 90%;
+  }
+
+  .addItemContainer {
+    flex-wrap: wrap;
+  }
+
+  .priceContainer,
+  .descriptionContainer,
+  .dateContainer {
+    min-width: 45%;
+    margin-bottom: 10px;
+  }
+}
