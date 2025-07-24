@@ -1,38 +1,191 @@
-.App {
-  text-align: center;
+.bg-container{
+display:flex;
+background-color: #7b4ec8;
+padding:40px;
+flex-direction: column;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.headingBgContainer{
+  display:flex;
+padding:40px;
+justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.heading{
+  font-family: sans-serif;
+  color:#ffd700
+
+}
+.headPara{
+  color:#ee7373;
+  font-size: medium;
+  font-weight: 500;
+}
+.totalLable{
+color:#3a2020e6;
+}
+.price{
+  color:#ff5733;
+}
+.expences-container{
+  font-family: sans-serif;
+  background-color: #fdf5e6;
+  border-radius: 10px;
+  box-shadow: inset;
+  font-size: 10px;
+  padding: 10px;
+  width:20vw;
+  height: 10vh;
+}
+.addExpenceHeading{
+  font-family: Roboto;
+  font-size:  20px;
+}
+.addExpencesContainer {
+  display: flex;
+  border-radius: 15px;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fdf5e6;
+  width:90px;
+  margin-left: 20px;
+  margin-right: 20px;
+  /* Remove margin that causes misalignment */
+  margin-left: 0;
+  margin-right: 0;
+
+  padding: 50px;
+  flex-direction: column;
+  box-sizing: border-box; /* Ensure padding doesn’t overflow */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.addItemContainer{
+  display: flex;
+  flex-direction: row;
+  gap:20px;
+}
+.dateContainer,
+.descriptionContainer,
+.priceContainer {
+  display: flex;
+  align-items: center;      /* Vertically center label and input */
+  margin-bottom: 10px;      /* Spacing between rows */
+  background-color: #96d877;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  min-width: 250px;
+}
+
+/* Label text */
+.dateContainer label,
+.descriptionContainer label,
+.priceContainer label {
+            /* Fixed width for alignment */
+  font-weight: bold;
+}
+
+/* Input fields */
+.dateContainer input,
+.descriptionContainer input,
+.priceContainer input,
+.descriptionContainer select {
+  flex: 1;                  /* Take remaining space */
+  padding: 5px 8px;
+  border: 1px solid #6dbb7e;
+  border-radius: 6px;
+}
+input{
+  background-color:#fff5e6;
+  border:none;
+  border-radius: 0%;
+  border-style: none;
+}
+
+.bg-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #7b4ec8;
+  padding: 40px;
+}
+
+.headingBgContainer,
+.addExpencesContainer {
+  width: 60%;
+  box-sizing: border-box;
+}
+
+.addExpencesContainer {
+  background-color: #fdf5e6;
+  border-radius: 15px;
+  padding: 20px;
+}
+.buttonContainer{
+  background-color: #207532;
   color: white;
+  font-family: Roboto;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: 600px;
+  font-style: normal;
+}
+.expencesListContainer{
+   display: flex;
+  border-radius: 15px;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fdf5e6;
+  margin-left: 20px;
+  margin-right: 20px;
+  /* Remove margin that causes misalignment */
+  margin-left: 0;
+  margin-right: 10px;
+margin :10px;
+  padding: 20px;
+  flex-direction: column;
+  box-sizing: border-box; /* Ensure padding doesn’t overflow */
+}
+.headingBgContainer,
+.addExpencesContainer,
+.expencesListContainer {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto; /* centers the containers */
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+/* Optional spacing between them */
+.headingBgContainer,
+.addExpencesContainer,
+.expencesListContainer {
+  margin-bottom: 30px;
+}
+.expenseTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  border: 2px solid #444; /* Add solid outer border */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.expenseTable th,
+.expenseTable td {
+  padding: 12px;
+  border: 2px solid #444; /* Make each cell line bold and visible */
+  text-align: left;
+}
+
+.expenseTable thead {
+  background-color: #f0f0f0;
+}
+
+.totalLabel {
+  text-align: right;
+  font-weight: bold;
+}
+
+.download-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
 }
