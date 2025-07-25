@@ -1,171 +1,173 @@
-.bg-container{
-display:flex;
-background-color: #7b4ec8;
-padding:40px;
-flex-direction: column;
-  box-sizing: border-box;
-}
-
-.headingBgContainer{
-  display:flex;
-padding:40px;
-justify-content: space-between;
-}
-
-.heading{
-  font-family: sans-serif;
-  color:#ffd700
-
-}
-.headPara{
-  color:#ee7373;
-  font-size: medium;
-  font-weight: 500;
-}
-.totalLable{
-color:#3a2020e6;
-}
-.price{
-  color:#ff5733;
-}
-.expences-container{
-  font-family: sans-serif;
-  background-color: #fdf5e6;
-  border-radius: 10px;
-  box-shadow: inset;
-  font-size: 10px;
-  padding: 10px;
-  width:20vw;
-  height: 10vh;
-}
-.addExpenceHeading{
-  font-family: Roboto;
-  font-size:  20px;
-}
-.addExpencesContainer {
-  width: 100%;  /* override fixed width */
-  max-width: 600px; /* limit max width for bigger screens */
-  margin: 20px auto; /* center horizontally */
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 15px;
-  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
-  background-color: #fdf5e6;
-}
-
-.addItemContainer{
-  display: flex;
-  flex-direction: row;
-  gap:20px;
-}
-.dateContainer,
-.descriptionContainer,
-.priceContainer {
-  display: flex;
-  align-items: center;      /* Vertically center label and input */
-  margin-bottom: 10px;      /* Spacing between rows */
-  background-color: #96d877;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  min-width: 250px;
-}
-
-/* Label text */
-.dateContainer label,
-.descriptionContainer label,
-.priceContainer label {
-            /* Fixed width for alignment */
-  font-weight: bold;
-}
-
-/* Input fields */
-.dateContainer input,
-.descriptionContainer input,
-.priceContainer input,
-.descriptionContainer select {
-  flex: 1;                  /* Take remaining space */
-  padding: 5px 8px;
-  border: 1px solid #6dbb7e;
-  border-radius: 6px;
-}
-input{
-  background-color:#fff5e6;
-  border:none;
-  border-radius: 0%;
-  border-style: none;
-}
-
+/* Base styling */
 .bg-container {
   display: flex;
   flex-direction: column;
   background-color: #7b4ec8;
   padding: 40px;
+  box-sizing: border-box;
+  align-items: center;
 }
 
 .headingBgContainer,
-.addExpencesContainer {
-  width: 60%;
+.addExpencesContainer,
+.expencesListContainer {
+  width: 100%;
+  max-width: 800px;
   box-sizing: border-box;
 }
 
-.addExpencesContainer {
-  background-color: #fdf5e6;
-  border-radius: 15px;
+/* Heading section */
+.headingBgContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px;
+  gap: 20px;
 }
-.buttonContainer{
+
+.heading {
+  font-family: sans-serif;
+  color: #ffd700;
+}
+
+.headPara {
+  color: #ee7373;
+  font-size: medium;
+  font-weight: 500;
+}
+
+.expences-container {
+  background-color: #fdf5e6;
+  border-radius: 10px;
+  font-family: sans-serif;
+  padding: 10px;
+  width: 100%;
+  max-width: 250px;
+  box-sizing: border-box;
+}
+
+.totalLable {
+  color: #3a2020e6;
+  font-size: 16px;
+}
+
+.price {
+  color: #ff5733;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Form container */
+.addExpencesContainer {
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: #fdf5e6;
+  box-sizing: border-box;
+}
+
+/* Heading inside form */
+.addExpenceHeading {
+  font-family: Roboto;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Three inputs container */
+.addItemContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+/* Input groups */
+.priceContainer,
+.descriptionContainer,
+.dateContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background-color: #96d877;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  min-width: 200px;
+  box-sizing: border-box;
+}
+
+input,
+select {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #6dbb7e;
+  border-radius: 6px;
+  background-color: #fff5e6;
+  font-size: 14px;
+}
+
+/* Add button */
+.buttonContainer {
+  margin-top: 15px;
   background-color: #207532;
   color: white;
   font-family: Roboto;
   border-radius: 5px;
   padding: 10px;
-  font-weight: 600px;
-  font-style: normal;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  max-width: 200px;
 }
-.expencesListContainer{
-   display: flex;
-  border-radius: 15px;
-  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
-  background-color: #fdf5e6;
-  margin-left: 20px;
-  margin-right: 20px;
-  /* Remove margin that causes misalignment */
-  margin-left: 0;
-  margin-right: 10px;
-margin :10px;
-  padding: 20px;
-  flex-direction: column;
-  box-sizing: border-box; /* Ensure padding doesn’t overflow */
-}
-.headingBgContainer,
-.addExpencesContainer,
+
+/* Expense list */
 .expencesListContainer {
-  max-width: 1000px;
-  width: 90%;
-  margin: 0 auto; /* centers the containers */
+  background-color: #fdf5e6;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
   box-sizing: border-box;
 }
 
-/* Optional spacing between them */
-.headingBgContainer,
-.addExpencesContainer,
-.expencesListContainer {
-  margin-bottom: 30px;
+/* Download row */
+.download-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
+
+.downloadLink {
+  padding: 8px 16px;
+  background-color: #2b8a3e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Expense table */
 .expenseTable {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 15px;
-  border: 2px solid #444; /* Add solid outer border */
+  margin-top: 20px;
+  border: 2px solid #444;
 }
 
 .expenseTable th,
 .expenseTable td {
   padding: 12px;
-  border: 2px solid #444; /* Make each cell line bold and visible */
+  border: 2px solid #444;
   text-align: left;
+  font-size: 15px;
 }
 
 .expenseTable thead {
@@ -177,98 +179,96 @@ margin :10px;
   font-weight: bold;
 }
 
-.download-container{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-}
-.downloadLink {
-  padding: 6px 10px;
-  background-color: #2b8a3e;
-  color: white;
+/* Delete Button */
+.deleteBtn {
+  background: none;
   border: none;
-  border-radius: 5px;
-  font-weight: 500;
   cursor: pointer;
+  font-size: 18px;
 }
-/* Small devices (phones) */
+
+/* Responsive media queries */
+
+/* Phones */
 @media (max-width: 600px) {
   .bg-container {
     padding: 20px;
   }
 
-  .headingBgContainer,
-  .addExpencesContainer,
-  .expencesListContainer {
-    width: 100%;  /* Full width on small screens */
-    padding: 10px;
-  }
-
   .headingBgContainer {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    padding: 10px;
   }
 
   .expences-container {
     width: 100%;
-    height: auto;
     margin-top: 10px;
   }
 
+  /* Keep form inputs in row and scroll */
   .addItemContainer {
-    flex-direction: column;  /* Stack input fields vertically */
+    flex-direction: row;
+    flex-wrap: nowrap;
     gap: 10px;
+    overflow-x: auto;
   }
 
   .priceContainer,
   .descriptionContainer,
   .dateContainer {
-    min-width: 100%; /* Full width inputs */
+    flex: 0 0 auto;
+    min-width: 200px;
   }
 
-  .buttonContainer {
+  .download-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .downloadLink {
     width: 100%;
-    padding: 12px 0;
     font-size: 16px;
   }
 
   .expenseTable th,
   .expenseTable td {
+    font-size: 13px;
     padding: 8px;
-    font-size: 14px;
-  }
-
-  .download-container {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-  }
-
-  .downloadLink {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
   }
 }
 
-/* Medium devices (tablets) */
+/* Tablets */
 @media (min-width: 601px) and (max-width: 900px) {
-  .headingBgContainer,
-  .addExpencesContainer,
-  .expencesListContainer {
-    width: 90%;
-  }
-
   .addItemContainer {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    gap: 10px;
   }
 
   .priceContainer,
   .descriptionContainer,
   .dateContainer {
-    min-width: 45%;
+    flex: 1;
+  }
+}
+input {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 380px) {
+  .addExpense input {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .inner-middle-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .each-container {
+    width: 100%;
     margin-bottom: 10px;
   }
 }

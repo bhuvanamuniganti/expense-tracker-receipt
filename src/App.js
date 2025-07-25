@@ -133,7 +133,7 @@ const total = itemsList.reduce((sum, item) => sum + Number(item.price), 0);
                            </button>
                
          </div>
-
+<div className = "table-container">
   <table className="expenseTable">
     <thead>
       <tr>
@@ -165,6 +165,7 @@ const total = itemsList.reduce((sum, item) => sum + Number(item.price), 0);
       </tr>
     </tbody>
   </table>
+  </div>
 </div>
 
 
