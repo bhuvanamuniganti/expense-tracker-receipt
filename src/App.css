@@ -300,3 +300,50 @@ input {
     font-size: 14px;
   }
 }
+.bg-container {
+  width: 100vw;
+  min-height: 100vh;
+}
+@media (max-width: 600px) {
+  .addItemContainer {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 15px;
+    overflow-x: unset;
+  }
+
+  .priceContainer,
+  .descriptionContainer,
+  .dateContainer {
+    flex: 1;
+    min-width: unset;
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .expenseTable th,
+  .expenseTable td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .download-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 600px) {
+  .addExpencesContainer,
+  .expencesListContainer {
+    padding: 15px;
+  }
+
+  .headingBgContainer {
+    padding: 10px;
+    gap: 10px;
+  }
+}
